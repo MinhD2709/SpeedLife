@@ -18,4 +18,6 @@ htmlcov/
 # Uploaded lectures and generated outputs are private local data
 /uploads/
 /outputs/
-/data/
+/data/*
+!/data/zetaris/
+!/data/zetaris/**

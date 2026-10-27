@@ -1,0 +1,111 @@
+{
+  "catalog_version": "usyd-badvcomp-cds-2026-01-19",
+  "degree": "Bachelor of Advanced Computing",
+  "major": "Computational Data Science",
+  "handbook_year": 2026,
+  "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html",
+  "units": [
+    {
+      "code": "DATA1001", "title": "Foundations of Data Science", "credit_points": 6,
+      "level": 1000, "requirement_group": "1000-level major core", "core": true,
+      "sessions": ["Semester 1", "Semester 2"], "prerequisites": [], "corequisites": [],
+      "prohibitions": ["DATA1901", "MATH1005", "MATH1905", "MATH1015", "MATH1115", "ENVX1002", "ECMT1010", "BUSS1020"],
+      "assumed_knowledge": "Year 10 mathematics or equivalent", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "INFO1110", "title": "Introduction to Programming", "credit_points": 6,
+      "level": 1000, "requirement_group": "1000-level major core", "core": true,
+      "sessions": ["Semester 1", "Semester 2"], "prerequisites": [], "corequisites": [],
+      "prohibitions": ["INFO1910", "INFO1103", "INFO1903", "INFO1105", "INFO1905", "ENGG1810"],
+      "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "INFO1113", "title": "Object-Oriented Programming", "credit_points": 6,
+      "level": 1000, "requirement_group": "degree core", "core": true,
+      "sessions": ["Semester 1", "Semester 2"],
+      "prerequisites": [{"any_of": ["INFO1110", "INFO1910", "ENGG1810"]}], "corequisites": [],
+      "prohibitions": ["INFO1103", "INFO1105", "INFO1905"], "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/advanced-computing-table.html"
+    },
+    {
+      "code": "MATH1064", "title": "Discrete Mathematics for Computation", "credit_points": 6,
+      "level": 1000, "requirement_group": "degree core", "core": true,
+      "sessions": ["Semester 2"], "prerequisites": [], "corequisites": [],
+      "prohibitions": ["MATH1004", "MATH1904"],
+      "assumed_knowledge": "Coordinate geometry, calculus, polynomial equations and algebra", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/advanced-computing-table.html"
+    },
+    {
+      "code": "COMP2123", "title": "Data Structures and Algorithms", "credit_points": 6,
+      "level": 2000, "requirement_group": "2000-level major core", "core": true,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["INFO1110", "INFO1910", "INFO1113", "DATA1002", "DATA1902", "ENGG1810"]}],
+      "corequisites": [], "prohibitions": ["INFO1105", "INFO1905", "COMP2823"],
+      "assumed_knowledge": "Discrete mathematics and probability", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "DATA2001", "title": "Data Science, Big Data and Data Variety", "credit_points": 6,
+      "level": 2000, "requirement_group": "2000-level major core", "core": true,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["DATA1002", "DATA1902", "INFO1110", "INFO1910", "INFO1903", "INFO1103", "ENGG1810"]}],
+      "corequisites": [], "prohibitions": ["DATA2901"], "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "DATA2002", "title": "Data Analytics: Learning from Data", "credit_points": 6,
+      "level": 2000, "requirement_group": "2000-level major core", "core": true,
+      "sessions": ["Semester 2"],
+      "prerequisites": [{"any_of": ["DATA1001", "DATA1901", "ENVX1002", "BUSS1020", "ECMT1010", "MATH1062", "MATH1962", "MATH1972"]}],
+      "corequisites": [], "prohibitions": ["STAT2012", "STAT2912", "DATA2902"],
+      "assumed_knowledge": "Prior statistics or data science with substantial coding", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "DATA3888", "title": "Data Science Capstone", "credit_points": 6,
+      "level": 3000, "requirement_group": "3000-level major core", "core": true,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["DATA2001", "DATA2901", "DATA2002", "DATA2902", "STAT2912", "STAT2012"]}],
+      "corequisites": [], "prohibitions": [], "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "COMP3027", "title": "Algorithm Design", "credit_points": 6,
+      "level": 3000, "requirement_group": "3000-level major selective", "core": false,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["COMP2123", "COMP2823"]}], "corequisites": [],
+      "prohibitions": ["COMP2007", "COMP2907", "COMP3927"],
+      "assumed_knowledge": "Discrete mathematics and probability", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "COMP3308", "title": "Introduction to Artificial Intelligence", "credit_points": 6,
+      "level": 3000, "requirement_group": "3000-level major selective", "core": false,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["INFO1110", "INFO1910", "ENGG1801", "ENGG1810", "DATA1002", "DATA1902"]}],
+      "corequisites": [], "prohibitions": ["COMP3608"],
+      "assumed_knowledge": "Data structures and algorithms", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "DATA3404", "title": "Scalable Data Management", "credit_points": 6,
+      "level": 3000, "requirement_group": "3000-level major selective", "core": false,
+      "sessions": ["Semester 1"],
+      "prerequisites": [{"any_of": ["DATA2001", "DATA2901", "ISYS2120", "INFO2120", "INFO2820"]}],
+      "corequisites": [], "prohibitions": ["INFO3504", "INFO3404"],
+      "assumed_knowledge": "Database structures, SQL and programming", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    },
+    {
+      "code": "DATA3406", "title": "Human-in-the-Loop Data Analytics", "credit_points": 6,
+      "level": 3000, "requirement_group": "3000-level major selective", "core": false,
+      "sessions": ["Semester 2"],
+      "prerequisites": [{"any_of": ["DATA2001", "DATA2901"]}, {"any_of": ["DATA2002", "DATA2902"]}],
+      "corequisites": [], "prohibitions": [],
+      "assumed_knowledge": "Statistics, database management and programming", "handbook_year": 2026,
+      "source_url": "https://www.sydney.edu.au/handbooks/engineering/advanced-computing/majors/computational-data-science/unit-of-study-table.html"
+    }
+  ]
+}

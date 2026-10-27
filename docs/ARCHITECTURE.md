@@ -1,45 +1,20 @@
-# Architecture and scope
-
-Proposed track: The Agent That Can Explain Why (confirm in HackOS).
-The supplied guide requires Zetaris, Nightshift, and a working Meterless Engine.
-This scaffold alone does not meet those integration requirements.
+# Architecture
 
 ```text
-React upload + result view
-    -> POST /api/cheat-sheets
-    -> bounded PDF validation + page extraction
-    -> ExtractionAgent (page-preserving chunks)
-    -> PlanningAgent (demo: round-robin source excerpts)
-    -> VerificationAgent (exact excerpts + source/page checks)
-        -> if evidence fails: one revision from source excerpts
-        -> if still empty: fail, never return unsupported points
-    -> cited result + warnings + trace
+Transcript + progression report
+  -> in-memory PDF extraction
+  -> editable confirmation checkpoint
+  -> Scout: Sense -> Interpret -> Guard -> Route -> signed contract
+  -> Zetaris: 2026 USYD curriculum facts
+  -> deterministic semester solver
+  -> Nightshift/Nemotron: explanation only
+  -> cited plan, exclusions, outlook and trace
 ```
 
-## Live workflow to implement
+Live mode refuses missing sponsor services; it never silently calls a different AI
+provider. Demo mode substitutes only the external boundaries so tests and UI work
+without secrets. The same planner and Scout implementation run in both modes.
 
-1. Ingest extracted pages into Zetaris with course, document, page, and chunk IDs.
-2. Planner chooses topics and a token budget; retrieve relevant chunks from Zetaris.
-3. Nightshift extracts concepts and drafts a compact sheet with structured citations.
-4. Verifier fetches original evidence and critiques coverage, definitions, and formulas.
-5. Planner revises based on missing evidence, capped at two attempts.
-6. Persist run state and revisions through the selected Meterless Engine.
-7. Surface the final evidence and step trace; avoid logging raw lectures or secrets.
-
-Sponsor adapters intentionally raise `IntegrationNotReady`; live API mode returns
-503 until a real orchestrator and adapters exist. No guessed endpoint paths are used.
-The existing demo agent implementation is deterministic and does not call AI.
-
-## Cost and scale
-
-A page is not a fixed number of tokens. Extract locally once; retain page metadata,
-cache by content hash, split by token count with the selected model's tokenizer,
-and retrieve only relevant chunks. Budget input/output per agent and per run.
-The current 1,200-character chunks are a demo bound, not a token measurement.
-Do not send all 100-page PDFs to every agent. Add hierarchical lecture summaries,
-coverage evaluation, duplicate suppression, and usage accounting for full courses.
-
-PDF parsing currently runs in the API process. Move parsing/OCR and longer agent
-runs to an isolated worker with timeouts and job status before supporting untrusted
-public traffic or large courses. OCR, tables/formula handling, semantic verification,
-authentication, durable storage, job queues, and full-course coverage remain TODO.
+The catalogue covers the 2026 Computational Data Science major plus the degree-core
+units needed by the included planning paths. The official handbook remains the
+source of truth; offerings and the indicative outlook must be rechecked before enrolment.

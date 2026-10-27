@@ -2,16 +2,15 @@
 
 | Owner | Initial responsibility | Handoff |
 | --- | --- | --- |
-| Builder 1 | Upload, cheat-sheet layout, evidence UI, print/export, error states | Work against `/api/cheat-sheets` response shape |
-| Builder 2 | PDF handling, Zetaris schema/retrieval, Nightshift agents, Engine state | Keep API schema stable; publish integration setup and tests |
-| Both | Agent feedback loop, coverage checks, end-to-end demo, submission | Review one another's work and run a clean setup |
+| Builder 1 | Transcript review, planner controls, cited plan UI and error states | Work against `/api/student-records/extract` and `/api/plans` |
+| Builder 2 | Zetaris catalogue, deterministic solver, Scout and Nightshift | Keep the API schema stable; publish integration checks and receipts |
+| Both | Redacted fixture checks, live sponsor smoke test and demo | Review one another's work and run a clean setup |
 
 Suggested next milestones:
-1. Run the local demo with two small PDFs.
-2. Implement and test Zetaris and Nightshift against official participant resources.
-3. Choose and implement a Meterless Engine checkpoint feature.
-4. Replace demo planning with AI-backed drafting and bounded evidence-driven revision.
-5. Test long PDFs, scans, duplicate filenames, bad inputs, model failures and budgets.
-6. Prepare a short demo and document which sponsor calls actually run.
+1. Validate parsing against the redacted transcript and progression report.
+2. Load the fixed 2026 catalogue into Zetaris and pass the live query check.
+3. Run the official Scout eval harness against the adapter.
+4. Connect Nightshift, discover the selected route and capture a Nemotron receipt.
+5. Run the end-to-end upload, confirmation and plan demo.
 
 This plan is documentation only; no tasks, messages, commits, or pushes are created.
