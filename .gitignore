@@ -1,0 +1,21 @@
+# Local credentials (the example contains placeholders only)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Dependencies and generated files
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.DS_Store
+# Uploaded lectures and generated outputs are private local data
+/uploads/
+/outputs/
+/data/
